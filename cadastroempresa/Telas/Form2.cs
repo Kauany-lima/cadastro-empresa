@@ -44,43 +44,53 @@ namespace cadastroempresa
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Metodos m = new Metodos();
-            m.cnpj = tx_cnpj.Text;
-            m.cpf = tx_cpf.Text;
-            m.razaosocial = tx_razao.Text;
-            m.nomefan = tx_nomefantasia.Text;
-            m.data = tx_data.Value;
-            m.capitalsocial = Convert.ToDouble(tx_cap.Text);
-            m.telefone = tx_telefone.Text;
-            m.situacao = tx_situacao.Text;
-            m.endereco = tx_est.Text;
-            m.bairro = tx_bairro.Text;
-            m.rua = tx_rua.Text;
-            m.numero = Convert.ToInt32(tx_num.Text);
-            m.nomeproprietario = tx_nomepro.Text;
-            m.natureza = tx_nat.Text;
-            m.Regimetributario = tx_regime.Text;
-            m.tipo = tx_tipo.Text;
-            m.porte = tx_porte.Text;
-            m.cidade = tx_cidade.Text;
-            
-            metodos.Add(m);
+            try
+            {
 
 
-          bool ret =   Valida.Validacao(tx_cpf.Text);
-          if(ret == true )
-          {
-            Form3 form3 = new Form3();
-            form3.Refresh();
-            form3.dataGridView1.DataSource = metodos;
-            form3.ShowDialog();
-          }
-          else
-          {
-            MessageBox.Show("Cpf inválido");
-          }
+                Metodos m = new Metodos();
+                m.cnpj = tx_cnpj.Text;
+                m.cpf = tx_cpf.Text;
+                m.razaosocial = tx_razao.Text;
+                m.nomefan = tx_nomefantasia.Text;
+                m.data = tx_data.Value;
+                m.capitalsocial = Convert.ToDouble(tx_cap.Text);
+                m.telefone = tx_telefone.Text;
+                m.situacao = tx_situacao.Text;
+                m.endereco = tx_est.Text;
+                m.bairro = tx_bairro.Text;
+                m.rua = tx_rua.Text;
+                m.numero = Convert.ToInt32(tx_num.Text);
+                m.nomeproprietario = tx_nomepro.Text;
+                m.natureza = tx_nat.Text;
+                m.Regimetributario = tx_regime.Text;
+                m.tipo = tx_tipo.Text;
+                m.porte = tx_porte.Text;
+                m.cidade = tx_cidade.Text;
 
-            
+                string texto = "";
+                foreach(RadioButton opc in tx_regime.Controls)
+                {
+                    if(opc.Checked)
+                    {
+                        texto = opc.Text;
+                    }
+                }
+                MessageBox.Show(texto);
+
+
+                metodos.Add(m);
+
+
+                Form3 form3 = new Form3();
+                form3.Refresh();
+                form3.dataGridView1.DataSource = metodos;
+                form3.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Preencha todos os campos corretamente." + " " + ex.Message);
+            }
             
         }
 

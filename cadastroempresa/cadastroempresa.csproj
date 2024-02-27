@@ -46,7 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="metodo.cs" />
+    <Compile Include="Classes\metodo.cs" />
     <Compile Include="Telas\Form2.cs">
       <SubType>Form</SubType>
     </Compile>

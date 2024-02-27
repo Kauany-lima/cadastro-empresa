@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tx_cnpj = new System.Windows.Forms.MaskedTextBox();
@@ -74,12 +73,10 @@
             this.tx_tipo = new System.Windows.Forms.GroupBox();
             this.label14 = new System.Windows.Forms.Label();
             this.tx_cidade = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.tx_num)).BeginInit();
             this.tx_regime.SuspendLayout();
             this.tx_porte.SuspendLayout();
             this.tx_tipo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -566,25 +563,12 @@
             this.tx_cidade.Size = new System.Drawing.Size(147, 22);
             this.tx_cidade.TabIndex = 46;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(55, 48);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 47;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(1013, 709);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.tx_cidade);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.tx_tipo);
@@ -631,7 +615,6 @@
             this.tx_porte.PerformLayout();
             this.tx_tipo.ResumeLayout(false);
             this.tx_tipo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -684,6 +667,5 @@
         private System.Windows.Forms.GroupBox tx_tipo;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox tx_cidade;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

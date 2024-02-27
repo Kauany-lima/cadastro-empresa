@@ -28,5 +28,13 @@ namespace cadastroempresa
             Form3 form3 = new Form3();
             form3.ShowDialog();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+                MessageBox.Show("Obrigada pela informação! ");
+            
+           
+        }
     }
 }
